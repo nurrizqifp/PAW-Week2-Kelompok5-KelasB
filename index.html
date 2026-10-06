@@ -2,24 +2,34 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Ringkasan jurnal Algoritma Genetika untuk otomatisasi penjadwalan akademik — PAW Week 2, Kelas B, Kelompok 5.">
+    <meta name="theme-color" content="#142a45">
+    <link rel="icon" href="data:,">
     <title>Implementasi Algoritma Genetika untuk Penjadwalan Akademik</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
     <header>
-        <h1>Implementasi Algoritma Genetika untuk Otomatisasi Penjadwalan Akademik Guna Menghindari Conflict of Schedule</h1>
-        <p>Landing Page Jurnal Pilihan | PAW Week 2 | Kelas B | Kelompok 5</p>
+        <div class="container">
+            <p class="badge">PAW Week 2 &middot; Kelas B &middot; Kelompok 5</p>
+            <h1>Implementasi Algoritma Genetika untuk Otomatisasi Penjadwalan Akademik Guna Menghindari Conflict of Schedule</h1>
+            <p class="subtitle">Landing Page Jurnal Pilihan &mdash; ringkasan, kekuatan, kekurangan, dan anggota kelompok.</p>
+        </div>
     </header>
 
     <nav aria-label="Navigasi utama">
-        <a href="#about">About</a>
-        <a href="#kekuatan">Kekuatan</a>
-        <a href="#kekurangan">Kekurangan</a>
-        <a href="#anggota">Anggota Kelompok</a>
+        <div class="container nav-inner">
+            <a href="#about">About</a>
+            <a href="#kekuatan">Kekuatan</a>
+            <a href="#kekurangan">Kekurangan</a>
+            <a href="#anggota">Anggota Kelompok</a>
+        </div>
     </nav>
 
-    <main class="page-content">
+    <main id="main" class="container page-content">
         <section id="about">
             <article>
                 <h2>About / Ringkasan Jurnal</h2>
@@ -43,47 +53,60 @@
                     5 sampai 7 hari kerja menjadi sekitar 10 sampai 15 menit.
                 </p>
 
-                <p>
-                    <strong>Penulis:</strong> Hasirun, Prema Adhitya Dharma Kusumah,
-                    M. Alfa Rizy, dan Ari Budi Riyanto.
-                </p>
-                <p><strong>Tahun terbit:</strong> 2026</p>
-                <p><strong>Jurnal:</strong> Jurnal Ilmiah Teknik Informatika, Vol. 15, No. 2, Juli 2026</p>
-                <p><strong>DOI:</strong> format.2026.v15.i2.006</p>
+                <dl class="meta">
+                    <div>
+                        <dt>Penulis</dt>
+                        <dd>Hasirun, Prema Adhitya Dharma Kusumah, M. Alfa Rizy, dan Ari Budi Riyanto.</dd>
+                    </div>
+                    <div>
+                        <dt>Tahun terbit</dt>
+                        <dd>2026</dd>
+                    </div>
+                    <div>
+                        <dt>Jurnal</dt>
+                        <dd>Jurnal Ilmiah Teknik Informatika, Vol. 15, No. 2, Juli 2026</dd>
+                    </div>
+                    <div>
+                        <dt>DOI</dt>
+                        <dd>format.2026.v15.i2.006</dd>
+                    </div>
+                </dl>
             </article>
         </section>
 
-        <section id="kekuatan">
-            <h2>Kekuatan</h2>
-            <ul>
-                <li>Pengujian menggunakan data riil dari FST UNPERBA dengan 20 dosen, 45 mata kuliah, dan 8 ruangan.</li>
-                <li>Penelitian menjelaskan tahapan Algoritma Genetika mulai dari pembentukan populasi sampai terminasi secara terstruktur.</li>
-                <li>Parameter algoritma diuji melalui beberapa kombinasi Population Size, Crossover Rate, dan Mutation Rate.</li>
-                <li>Sistem memiliki aturan Hard Constraints dan Soft Constraints yang sesuai dengan kebutuhan penjadwalan akademik.</li>
-                <li>Hasil pengujian menunjukkan best fitness 1.0, status zero conflict, dan waktu komputasi 10 menit 15 detik pada konfigurasi yang digunakan.</li>
-                <li>Sistem mampu mengakomodasi 90% preferensi waktu mengajar dosen berdasarkan hasil penelitian.</li>
-            </ul>
-        </section>
+        <div class="two-col">
+            <section id="kekuatan">
+                <h2>Kekuatan</h2>
+                <ul>
+                    <li>Pengujian menggunakan data riil dari FST UNPERBA dengan 20 dosen, 45 mata kuliah, dan 8 ruangan.</li>
+                    <li>Penelitian menjelaskan tahapan Algoritma Genetika mulai dari pembentukan populasi sampai terminasi secara terstruktur.</li>
+                    <li>Parameter algoritma diuji melalui beberapa kombinasi Population Size, Crossover Rate, dan Mutation Rate.</li>
+                    <li>Sistem memiliki aturan Hard Constraints dan Soft Constraints yang sesuai dengan kebutuhan penjadwalan akademik.</li>
+                    <li>Hasil pengujian menunjukkan best fitness 1.0, status zero conflict, dan waktu komputasi 10 menit 15 detik pada konfigurasi yang digunakan.</li>
+                    <li>Sistem mampu mengakomodasi 90% preferensi waktu mengajar dosen berdasarkan hasil penelitian.</li>
+                </ul>
+            </section>
 
-        <section id="kekurangan">
-            <h2>Kekurangan</h2>
-            <ul>
-                <li>Pembahasan utama pengujian menggunakan data riil Skenario II, sedangkan pembahasan hasil untuk skenario beban yang lebih besar masih terbatas.</li>
-                <li>Pada bagian prosedur pengembangan sistem terdapat pengulangan penamaan tahap, yaitu “Analisis Kebutuhan” pada poin a dan b.</li>
-                <li>Penelitian berfokus pada kebutuhan FST UNPERBA sehingga penerapan pada fakultas dengan aturan, fasilitas, dan karakteristik yang berbeda masih membutuhkan penyesuaian.</li>
-                <li>Pengukuran keberhasilan lebih banyak berfokus pada waktu komputasi, fitness, konflik jadwal, dan preferensi dosen. Pembahasan mengenai pengalaman pengguna sistem masih belum menjadi fokus utama.</li>
-            </ul>
-        </section>
+            <section id="kekurangan">
+                <h2>Kekurangan</h2>
+                <ul>
+                    <li>Pembahasan utama pengujian menggunakan data riil Skenario II, sedangkan pembahasan hasil untuk skenario beban yang lebih besar masih terbatas.</li>
+                    <li>Pada bagian prosedur pengembangan sistem terdapat pengulangan penamaan tahap, yaitu “Analisis Kebutuhan” pada poin a dan b.</li>
+                    <li>Penelitian berfokus pada kebutuhan FST UNPERBA sehingga penerapan pada fakultas dengan aturan, fasilitas, dan karakteristik yang berbeda masih membutuhkan penyesuaian.</li>
+                    <li>Pengukuran keberhasilan lebih banyak berfokus pada waktu komputasi, fitness, konflik jadwal, dan preferensi dosen. Pembahasan mengenai pengalaman pengguna sistem masih belum menjadi fokus utama.</li>
+                </ul>
+            </section>
+        </div>
 
         <section id="anggota">
             <h2>Anggota Kelompok</h2>
-            <ol>
-                <li>Nur Rizqi Febriansyah Putra    |    NIM: 20240140056</li>
-                <li>Nisrina Hanifah Ramadhani   | NIM: 20240140075</li>
-                <li>Bima Eka Setiawan   |   NIM: 20240140089</li>
-                <li>Resya Glamoda Suhendri  |   NIM: 20240140091</li>
-                <li>Haidar Yahya Mudhofar   |   NIM: 20240140093</li>
-                <li>A. Muh. Fadil Asytar    |   NIM: 20240140133</li>
+            <ol class="members">
+                <li><span>Nur Rizqi Febriansyah Putra</span><span class="nim">20240140056</span></li>
+                <li><span>Nisrina Hanifah Ramadhani</span><span class="nim">20240140075</span></li>
+                <li><span>Bima Eka Setiawan</span><span class="nim">20240140089</span></li>
+                <li><span>Resya Glamoda Suhendri</span><span class="nim">20240140091</span></li>
+                <li><span>Haidar Yahya Mudhofar</span><span class="nim">20240140093</span></li>
+                <li><span>A. Muh. Fadil Asytar</span><span class="nim">20240140133</span></li>
             </ol>
         </section>
 
@@ -102,7 +125,9 @@
     </main>
 
     <footer>
-        <p>PAW Week 2 | Kelompok 5 | Kelas B</p>
+        <div class="container">
+            <p>PAW Week 2 | Kelompok 5 | Kelas B</p>
+        </div>
     </footer>
 </body>
 </html>
