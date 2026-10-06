@@ -12,121 +12,205 @@
 <body>
     <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-    <header>
-        <div class="container">
-            <p class="badge">PAW Week 2 &middot; Kelas B &middot; Kelompok 5</p>
-            <h1>Implementasi Algoritma Genetika untuk Otomatisasi Penjadwalan Akademik Guna Menghindari Conflict of Schedule</h1>
-            <p class="subtitle">Landing Page Jurnal Pilihan &mdash; ringkasan, kekuatan, kekurangan, dan anggota kelompok.</p>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <ul class="meta-chips" aria-label="Identitas jurnal">
+                    <li>Jurnal Ilmiah Teknik Informatika</li>
+                    <li>Vol. 15, No. 2 &middot; Juli 2026</li>
+                    <li>DOI: format.2026.v15.i2.006</li>
+                </ul>
+                <h1>Algoritma Genetika untuk penjadwalan akademik tanpa bentrok.</h1>
+                <p class="lede">
+                    Sistem berbasis web dengan Roulette Wheel Selection di FST UNPERBA:
+                    dari 5&ndash;7 hari kerja manual menjadi 10&ndash;15 menit, dengan
+                    <em>best fitness</em> 1.0 pada generasi ke-210.
+                </p>
+                <dl class="params" aria-label="Konfigurasi terbaik">
+                    <div>
+                        <dt>Populasi</dt>
+                        <dd>100</dd>
+                    </div>
+                    <div>
+                        <dt>Crossover</dt>
+                        <dd>0.8</dd>
+                    </div>
+                    <div>
+                        <dt>Mutasi</dt>
+                        <dd>0.05</dd>
+                    </div>
+                    <div>
+                        <dt>Waktu</dt>
+                        <dd>10 mnt 15 dtk</dd>
+                    </div>
+                </dl>
+                <p class="hero-note">PAW Week 2 &middot; Kelas B &middot; Kelompok 5 &mdash; Landing Page Jurnal Pilihan</p>
+            </div>
+            <figure class="board" aria-label="Visual papan jadwal: delapan ruangan tanpa bentrok">
+                <figcaption>
+                    <span>FST UNPERBA &mdash; papan jadwal</span>
+                    <span class="board-status">zero conflict</span>
+                </figcaption>
+                <svg viewBox="0 0 320 228" role="img" aria-describedby="board-desc">
+                    <title id="board-desc">Delapan baris ruangan dengan blok jadwal yang tidak saling bertabrakan</title>
+                    <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#9db4cc">
+                        <text x="0" y="28">R1</text>
+                        <text x="0" y="52">R2</text>
+                        <text x="0" y="76">R3</text>
+                        <text x="0" y="100">R4</text>
+                        <text x="0" y="124">R5</text>
+                        <text x="0" y="148">R6</text>
+                        <text x="0" y="172">R7</text>
+                        <text x="0" y="196">R8</text>
+                    </g>
+                    <g>
+                        <rect x="28" y="16" width="70" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="106" y="16" width="96" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="210" y="16" width="60" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="28" y="40" width="52" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="150" y="40" width="80" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="238" y="40" width="54" height="16" rx="3" fill="#c2410c"/>
+                        <rect x="60" y="64" width="88" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="156" y="64" width="64" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="28" y="88" width="90" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="126" y="88" width="60" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="228" y="88" width="64" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="44" y="112" width="76" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="128" y="112" width="92" height="16" rx="3" fill="#c2410c"/>
+                        <rect x="28" y="136" width="64" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="100" y="136" width="70" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="200" y="136" width="92" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="52" y="160" width="98" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="158" y="160" width="70" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="28" y="184" width="82" height="16" rx="3" fill="#d6e7f5"/>
+                        <rect x="118" y="184" width="66" height="16" rx="3" fill="#7fb6dd"/>
+                        <rect x="192" y="184" width="100" height="16" rx="3" fill="#d6e7f5"/>
+                    </g>
+                    <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#9db4cc">
+                        <text x="28" y="216">07.00</text>
+                        <text x="140" y="216">10.00</text>
+                        <text x="248" y="216">13.00</text>
+                    </g>
+                </svg>
+            </figure>
         </div>
     </header>
 
     <nav aria-label="Navigasi utama">
         <div class="container nav-inner">
-            <a href="#about">About</a>
-            <a href="#kekuatan">Kekuatan</a>
-            <a href="#kekurangan">Kekurangan</a>
-            <a href="#anggota">Anggota Kelompok</a>
+            <a href="#about">Ringkasan</a>
+            <a href="#penilaian">Penilaian</a>
+            <a href="#anggota">Anggota</a>
         </div>
     </nav>
 
-    <main id="main" class="container page-content">
-        <section id="about">
-            <article>
-                <h2>About / Ringkasan Jurnal</h2>
-
-                <p>
-                    Jurnal ini membahas pengembangan sistem penjadwalan akademik berbasis website
-                    menggunakan Algoritma Genetika dengan metode Roulette Wheel Selection.
-                    Sistem dibuat untuk membantu proses penyusunan jadwal perkuliahan di Fakultas
-                    Sains dan Teknik Universitas Perwira Purbalingga (UNPERBA), terutama pada kondisi
-                    yang memiliki banyak batasan ruang, waktu, dosen, dan kebutuhan laboratorium.
-                </p>
-
-                <p>
-                    Penelitian menggunakan metode Research and Development (R&amp;D). Pengujian riil
-                    dilakukan menggunakan data 20 dosen, 45 mata kuliah, dan 8 ruangan. Algoritma
-                    menggunakan proses inisialisasi populasi, evaluasi fitness, seleksi, crossover,
-                    dan mutasi. Hasil pengujian menunjukkan konfigurasi Population Size 100,
-                    Crossover Rate 0.8, dan Mutation Rate 0.05 mencapai best fitness 1.0 pada
-                    generasi ke-210 dengan waktu komputasi 10 menit 15 detik. Sistem menghasilkan
-                    jadwal tanpa bentrok dan memangkas proses manual yang sebelumnya membutuhkan
-                    5 sampai 7 hari kerja menjadi sekitar 10 sampai 15 menit.
-                </p>
-
-                <dl class="meta">
-                    <div>
-                        <dt>Penulis</dt>
-                        <dd>Hasirun, Prema Adhitya Dharma Kusumah, M. Alfa Rizy, dan Ari Budi Riyanto.</dd>
-                    </div>
-                    <div>
-                        <dt>Tahun terbit</dt>
-                        <dd>2026</dd>
-                    </div>
-                    <div>
-                        <dt>Jurnal</dt>
-                        <dd>Jurnal Ilmiah Teknik Informatika, Vol. 15, No. 2, Juli 2026</dd>
-                    </div>
-                    <div>
-                        <dt>DOI</dt>
-                        <dd>format.2026.v15.i2.006</dd>
-                    </div>
-                </dl>
-            </article>
+    <main id="main" class="container">
+        <section id="about" aria-labelledby="about-title">
+            <div class="section-head">
+                <h2 id="about-title">Ringkasan jurnal</h2>
+                <p class="section-sub">Penjadwalan kuliah dengan banyak batasan: ruang, waktu, dosen, laboratorium.</p>
+            </div>
+            <div class="about-grid">
+                <article class="prose">
+                    <p class="lede-body">
+                        Jurnal ini membahas pengembangan sistem penjadwalan akademik berbasis website
+                        menggunakan Algoritma Genetika dengan metode Roulette Wheel Selection di Fakultas
+                        Sains dan Teknik Universitas Perwira Purbalingga (UNPERBA).
+                    </p>
+                    <p>
+                        Penelitian menggunakan metode Research and Development (R&amp;D) dengan data riil:
+                        20 dosen, 45 mata kuliah, dan 8 ruangan. Alurnya mencakup inisialisasi populasi,
+                        evaluasi fitness, seleksi, crossover, dan mutasi. Konfigurasi Populasi 100,
+                        Crossover 0.8, dan Mutasi 0.05 mencapai best fitness 1.0 pada generasi ke-210
+                        dalam 10 menit 15 detik &mdash; memangkas proses manual 5&ndash;7 hari kerja
+                        menjadi sekitar 10&ndash;15 menit.
+                    </p>
+                    <dl class="biblio">
+                        <div>
+                            <dt>Penulis</dt>
+                            <dd>Hasirun, Prema Adhitya Dharma Kusumah, M. Alfa Rizy, Ari Budi Riyanto</dd>
+                        </div>
+                        <div>
+                            <dt>Terbit</dt>
+                            <dd>2026 &mdash; Jurnal Ilmiah Teknik Informatika, Vol. 15, No. 2, Juli 2026</dd>
+                        </div>
+                    </dl>
+                </article>
+                <figure class="fitness" aria-label="Grafik fitness terhadap generasi">
+                    <figcaption>
+                        <span>Best fitness &rarr; 1.0</span>
+                        <span>generasi 210</span>
+                    </figcaption>
+                    <svg viewBox="0 0 320 190" role="img" aria-describedby="fit-desc">
+                        <title id="fit-desc">Kurva fitness menanjak dan mencapai 1.0 pada generasi ke-210</title>
+                        <line x1="34" y1="10" x2="34" y2="158" stroke="#dce4ee" stroke-width="1"/>
+                        <line x1="34" y1="158" x2="310" y2="158" stroke="#dce4ee" stroke-width="1"/>
+                        <line x1="34" y1="30" x2="310" y2="30" stroke="#c2410c" stroke-width="1" stroke-dasharray="5 4"/>
+                        <text x="6" y="33" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#4b5b6e">1.0</text>
+                        <text x="6" y="161" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#4b5b6e">0</text>
+                        <text x="34" y="174" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#4b5b6e">0</text>
+                        <text x="282" y="174" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#4b5b6e">210</text>
+                        <path d="M34 148 C 70 144, 90 128, 120 118 S 170 96, 200 74 S 250 40, 292 30"
+                            fill="none" stroke="#1f3a5f" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="292" cy="30" r="4.5" fill="#c2410c"/>
+                    </svg>
+                </figure>
+            </div>
         </section>
 
-        <div class="two-col">
-            <section id="kekuatan">
-                <h2>Kekuatan</h2>
-                <ul>
-                    <li>Pengujian menggunakan data riil dari FST UNPERBA dengan 20 dosen, 45 mata kuliah, dan 8 ruangan.</li>
-                    <li>Penelitian menjelaskan tahapan Algoritma Genetika mulai dari pembentukan populasi sampai terminasi secara terstruktur.</li>
-                    <li>Parameter algoritma diuji melalui beberapa kombinasi Population Size, Crossover Rate, dan Mutation Rate.</li>
-                    <li>Sistem memiliki aturan Hard Constraints dan Soft Constraints yang sesuai dengan kebutuhan penjadwalan akademik.</li>
-                    <li>Hasil pengujian menunjukkan best fitness 1.0, status zero conflict, dan waktu komputasi 10 menit 15 detik pada konfigurasi yang digunakan.</li>
-                    <li>Sistem mampu mengakomodasi 90% preferensi waktu mengajar dosen berdasarkan hasil penelitian.</li>
-                </ul>
-            </section>
+        <section id="penilaian" aria-labelledby="nilai-title">
+            <div class="section-head">
+                <h2 id="nilai-title">Penilaian</h2>
+                <p class="section-sub">Enam kekuatan berbanding empat catatan &mdash; dibaca berdampingan.</p>
+            </div>
+            <div class="versus">
+                <article id="kekuatan" aria-labelledby="kuat-title">
+                    <h3 id="kuat-title">Kekuatan <span class="count">6</span></h3>
+                    <ul class="tick">
+                        <li>Pengujian memakai data riil FST UNPERBA: 20 dosen, 45 mata kuliah, 8 ruangan.</li>
+                        <li>Tahapan genetika &mdash; populasi hingga terminasi &mdash; dijelaskan terstruktur.</li>
+                        <li>Parameter diuji dalam beberapa kombinasi Populasi, Crossover, dan Mutasi.</li>
+                        <li>Aturan Hard dan Soft Constraints sesuai kebutuhan akademik.</li>
+                        <li>Best fitness 1.0, zero conflict, 10 menit 15 detik pada konfigurasi terpilih.</li>
+                        <li>Mengakomodasi 90% preferensi waktu mengajar dosen.</li>
+                    </ul>
+                </article>
+                <article id="kekurangan" aria-labelledby="kurang-title">
+                    <h3 id="kurang-title">Kekurangan <span class="count muted">4</span></h3>
+                    <ul class="dash">
+                        <li>Uji utama memakai Skenario II; skenario beban lebih besar minim dibahas.</li>
+                        <li>Pengulangan penamaan tahap &ldquo;Analisis Kebutuhan&rdquo; pada poin a dan b.</li>
+                        <li>Fokus pada FST UNPERBA &mdash; fakultas lain butuh penyesuaian.</li>
+                        <li>Ukuran sukses teknis; pengalaman pengguna belum jadi fokus.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-            <section id="kekurangan">
-                <h2>Kekurangan</h2>
-                <ul>
-                    <li>Pembahasan utama pengujian menggunakan data riil Skenario II, sedangkan pembahasan hasil untuk skenario beban yang lebih besar masih terbatas.</li>
-                    <li>Pada bagian prosedur pengembangan sistem terdapat pengulangan penamaan tahap, yaitu “Analisis Kebutuhan” pada poin a dan b.</li>
-                    <li>Penelitian berfokus pada kebutuhan FST UNPERBA sehingga penerapan pada fakultas dengan aturan, fasilitas, dan karakteristik yang berbeda masih membutuhkan penyesuaian.</li>
-                    <li>Pengukuran keberhasilan lebih banyak berfokus pada waktu komputasi, fitness, konflik jadwal, dan preferensi dosen. Pembahasan mengenai pengalaman pengguna sistem masih belum menjadi fokus utama.</li>
-                </ul>
-            </section>
-        </div>
-
-        <section id="anggota">
-            <h2>Anggota Kelompok</h2>
-            <ol class="members">
-                <li><span>Nur Rizqi Febriansyah Putra</span><span class="nim">20240140056</span></li>
-                <li><span>Nisrina Hanifah Ramadhani</span><span class="nim">20240140075</span></li>
-                <li><span>Bima Eka Setiawan</span><span class="nim">20240140089</span></li>
-                <li><span>Resya Glamoda Suhendri</span><span class="nim">20240140091</span></li>
-                <li><span>Haidar Yahya Mudhofar</span><span class="nim">20240140093</span></li>
-                <li><span>A. Muh. Fadil Asytar</span><span class="nim">20240140133</span></li>
+        <section id="anggota" aria-labelledby="anggota-title">
+            <div class="section-head">
+                <h2 id="anggota-title">Anggota kelompok</h2>
+                <p class="section-sub">Kelompok 5 &middot; Kelas B &middot; diurutkan berdasar NIM.</p>
+            </div>
+            <ol class="ledger">
+                <li><span class="nama">Nur Rizqi Febriansyah Putra</span><span class="nim">20240140056</span></li>
+                <li><span class="nama">Nisrina Hanifah Ramadhani</span><span class="nim">20240140075</span></li>
+                <li><span class="nama">Bima Eka Setiawan</span><span class="nim">20240140089</span></li>
+                <li><span class="nama">Resya Glamoda Suhendri</span><span class="nim">20240140091</span></li>
+                <li><span class="nama">Haidar Yahya Mudhofar</span><span class="nim">20240140093</span></li>
+                <li><span class="nama">A. Muh. Fadil Asytar</span><span class="nim">20240140133</span></li>
             </ol>
         </section>
 
-        <aside>
-            <h2>Informasi Tugas</h2>
-            <p>
-                Mata kuliah: Pengembangan Aplikasi Web (PAW)
-                <br>
-                Kelas: B
-                <br>
-                Kelompok: 5
-                <br>
-                Repository: PAW-Week2-Kelompok5-KelasB
-            </p>
+        <aside class="colophon">
+            <h2>Tugas</h2>
+            <p>Pengembangan Aplikasi Web (PAW) &middot; Kelas B &middot; Kelompok 5 &middot; PAW-Week2-Kelompok5-KelasB</p>
         </aside>
     </main>
 
     <footer>
-        <div class="container">
-            <p>PAW Week 2 | Kelompok 5 | Kelas B</p>
+        <div class="container foot">
+            <p><strong>PAW Week 2 &mdash; Kelompok 5, Kelas B.</strong> Ringkasan jurnal Algoritma Genetika, UNPERBA 2026.</p>
         </div>
     </footer>
 </body>
